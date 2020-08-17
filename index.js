@@ -612,9 +612,9 @@ function bundleMain ({
       envVars[k] = process.env[k]
     }
   })
-  // Enable/disable nodeIntegration
-  envVars.ELECTRON_NODE_INTEGRATION =
-    args.headless || pluginOptions.nodeIntegration || false
+
+  // EVWT requires node integration
+  envVars.ELECTRON_NODE_INTEGRATION = true
   config.plugin('env').use(webpack.EnvironmentPlugin, [envVars])
 
   if (args.debug) {

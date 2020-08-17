@@ -11,17 +11,7 @@ const createProject = async (projectName, useTS, customPlugins = {}) => {
   const preset = {
     ...defaultPreset,
     configs: {
-      vue: {
-        lintOnSave: false,
-        pluginOptions: {
-          electronBuilder: {
-            // EVWT requires nodeIntegration: true
-            // See https://www.electronjs.org/docs/tutorial/security#2-do-not-enable-nodejs-integration-for-remote-content
-            // You should never use a remote URL with win.loadURL() with this set to true.
-            nodeIntegration: true
-          }
-        }
-      }
+      vue: { lintOnSave: false }
     }
   }
   if (useTS) {

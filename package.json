@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-evwt",
-  "version": "2.0.0-rc-evwt.4",
+  "version": "2.0.0-rc.4-evwt.7",
   "description": "The EVWT fork of vue-cli-plugin-electron-builder",
   "main": "index.js",
   "scripts": {
