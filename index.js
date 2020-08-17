@@ -664,7 +664,7 @@ function bundleMain ({
     .add(api.resolve(mainProcessFile))
 
   preloadConfig.target('electron-preload')
-  let preload = pluginOptions.preload
+  let preload = pluginOptions.preload || 'src/preload.js'
   if (preload) {
     // Add preload files if they are set in pluginOptions
     if (typeof preload === 'string') {

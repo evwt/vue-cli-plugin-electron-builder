@@ -1,7 +1,7 @@
 {
-  "name": "vue-cli-plugin-electron-builder",
-  "version": "2.0.0-rc.4",
-  "description": "Easily Build Your Vue.js App For Desktop With Electron",
+  "name": "vue-cli-plugin-evwt",
+  "version": "2.0.0-rc-evwt.24",
+  "description": "The EVWT fork of vue-cli-plugin-electron-builder",
   "main": "index.js",
   "homepage": "https://nklayman.github.io/vue-cli-plugin-electron-builder/",
   "funding": "https://github.com/sponsors/nklayman",
