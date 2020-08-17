@@ -1,10 +1,8 @@
 {
-  "name": "vue-cli-plugin-electron-builder",
+  "name": "vue-cli-evwt",
   "version": "2.0.0-rc.4",
-  "description": "Easily Build Your Vue.js App For Desktop With Electron",
+  "description": "The EVWT fork of vue-cli-plugin-electron-builder",
   "main": "index.js",
-  "homepage": "https://nklayman.github.io/vue-cli-plugin-electron-builder/",
-  "funding": "https://github.com/sponsors/nklayman",
   "scripts": {
     "test": "jest",
     "pretest": "rimraf __tests__/projects/*",
@@ -13,18 +11,8 @@
     "docs:build": "vuepress build docs",
     "docs:deploy": "node ./deployDocs.js"
   },
-  "keywords": [
-    "electron",
-    "vue",
-    "cli",
-    "vue-cli",
-    "vue-cli-plugin",
-    "webpack",
-    "electron-builder",
-    "electron-webpack"
-  ],
-  "repository": "https://github.com/nklayman/vue-cli-plugin-electron-builder.git",
-  "author": "Noah Klayman <noahklayman@gmail.com>",
+  "repository": "https://github.com/evwt/vue-cli-plugin-electron-builder",
+  "author": "John Susek <john@johnsolo.net> (Fork), Noah Klayman <noahklayman@gmail.com> (Original)",
   "license": "MIT",
   "private": false,
   "dependencies": {
