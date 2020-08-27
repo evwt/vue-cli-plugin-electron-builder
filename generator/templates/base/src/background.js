@@ -30,6 +30,7 @@ async function createWindow() {
   } else {
     createProtocol('app')
     // Load the index.html when not in development
+    // You should _never_ load a remote url with this method for security reasons.
     win.loadURL('app://./index.html')
   }
 }
