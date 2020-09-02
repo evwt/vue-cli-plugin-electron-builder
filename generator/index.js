@@ -115,7 +115,7 @@ module.exports = (api, options = {}) => {
     devDependencies['@types/electron-devtools-installer'] = '^2.2.0'
   }
   const dependencies = {
-    evwt: '^0.0.19'
+    evwt: '^0.0.20'
   }
   if (testFramework) {
     // Spectron version should be electron version + 2

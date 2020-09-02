@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-evwt",
-  "version": "2.0.0-rc-evwt.27",
+  "version": "2.0.0-rc-evwt.29",
   "description": "The EVWT fork of vue-cli-plugin-electron-builder",
   "main": "index.js",
   "homepage": "https://nklayman.github.io/vue-cli-plugin-electron-builder/",
