@@ -1,7 +1,20 @@
 'use strict'
 
+import path from 'path'
 import { app, protocol, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
+import { EvContextMenu, EvMenu, EvStore, EvWindow } from 'evwt/background'
+
+// EvStore returns the electron-store instance the frontend uses
+// See: https://github.com/sindresorhus/electron-store
+const store = EvStore.activate();
+
+// Set up IPC event handlers for EvContextMenu
+EvContextMenu.activate();
+
+// Set up IPC event handlers for EvMenu
+EvMenu.activate()
+
 <% if (devtoolsExtensionsBroken) { %>// <% } %>import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -12,7 +25,7 @@ protocol.registerSchemesAsPrivileged([
 
 async function createWindow() {
   // Create the browser window.
-  const win = new BrowserWindow({
+  const options = {
     width: 800,
     height: 600,
     webPreferences: {
@@ -21,7 +34,14 @@ async function createWindow() {
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
       preload: path.join(__dirname, 'preload.js')
     }
-  })
+  }
+
+  const restoreId = 'main'; // can be a file path, database ID, etc in multiwindow apps
+  const evWindow = new EvWindow(restoreId, options);
+  const win = evWindow.browserWindow; // access the browserWindow for the full Electron API
+
+  // Starting using EvMenu with this window
+  EvMenu.attach(win)
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode

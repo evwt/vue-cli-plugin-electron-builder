@@ -1,3 +1,3 @@
-import { ipcRenderer } from 'electron'
+import electron from 'electron'
 
-window.ipcRenderer = ipcRenderer
+window.electron = electron

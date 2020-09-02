@@ -1,5 +1,7 @@
 # Vue CLI Plugin Electron Builder
 
+> 🍴This is a FORK of [vue-cli-plugin-electron-builder](https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/guide.html), tailored for EVWT. The original README is below. Please support the vue-cli-plugin-electron-builder project, their work is important to the Vue+Electron community.
+
 > Easily Build Your Vue.js App For Desktop With Electron
 
 Build status: [![Build status](https://github.com/nklayman/vue-cli-plugin-electron-builder/workflows/Node%20CI/badge.svg)](https://github.com/nklayman/vue-cli-plugin-electron-builder/actions)

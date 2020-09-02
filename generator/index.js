@@ -102,7 +102,10 @@ module.exports = (api, options = {}) => {
   addScript('postinstall', 'electron-builder install-app-deps')
   addScript('postuninstall', 'electron-builder install-app-deps')
   const devDependencies = {
-    'electron-devtools-installer': '^3.1.0'
+    'electron-devtools-installer': '^3.1.0',
+    // For EvIcon
+    'babel-loader': '^8.1.0',
+    'vue-svg-loader': '^0.16.0'
   }
   if (electronVersion) {
     // Use provided electron version
@@ -111,7 +114,9 @@ module.exports = (api, options = {}) => {
   if (usesTS) {
     devDependencies['@types/electron-devtools-installer'] = '^2.2.0'
   }
-  const dependencies = {}
+  const dependencies = {
+    evwt: '^0.0.19'
+  }
   if (testFramework) {
     // Spectron version should be electron version + 2
     devDependencies.spectron =
